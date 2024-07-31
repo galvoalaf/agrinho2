@@ -1,73 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Game</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f7f7f7;
-        }
-        #game {
-            width: 600px;
-            height: 200px;
-            border: 2px solid #333;
-            position: relative;
-        }
-        #dino {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            background-color: #4CAF50;
-        }
-        .cactus {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 20px;
-            height: 50px;
-            background-color: #8B0000;
-        }
-    </style>
+    <title>Agrinho 2024 - Educação no Campo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game">
-        <div id="dino"></div>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Agrinho 2024">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.code === 'Space') {
-                jump();
-            }
-        });
+    <main>
+        <section id="sobre">
+            <h2>Sobre o Agrinho 2024</h2>
+            <p>O Agrinho é um programa educativo que promove a educação no campo, incentivando práticas sustentáveis e valorizando o meio ambiente.</p>
+            <p>Em 2024, o Agrinho continua sua missão de transformar a educação através de atividades interativas e educativas.</p>
+        </section>
 
-        function jump() {
-            let dino = document.getElementById('dino');
-            if (!dino.classList.contains('jump')) {
-                dino.classList.add('jump');
-                setTimeout(function() {
-                    dino.classList.remove('jump');
-                }, 500);
-            }
-        }
+        <section id="programas">
+            <h2>Programas</h2>
+            <ul>
+                <li>Programa Educacional</li>
+                <li>Concurso de Redação e Desenho</li>
+                <li>Feiras e Exposições</li>
+            </ul>
+        </section>
 
-        setInterval(function() {
-            let game = document.getElementById('game');
-            let dino = document.getElementById('dino');
-            let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue('bottom'));
+        <section id="atividades">
+            <h2>Atividades</h2>
+            <p>O Agrinho oferece diversas atividades para alunos e professores, incluindo:</p>
+            <ul>
+                <li>Oficinas de Agricultura Sustentável</li>
+                <li>Palestras sobre Meio Ambiente</li>
+                <li>Visitas a Propriedades Rurais</li>
+            </ul>
+        </section>
 
-            if (dinoBottom > 0) {
-                dino.style.bottom = (dinoBottom - 10) + 'px';
-            }
-        }, 50);
-    </script>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações sobre o Agrinho 2024:</p>
+            <p>E-mail: info@agrinho2024.com.br</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Agrinho. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+

@@ -1,103 +1,109 @@
-/* Estilos gerais */
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 .logo img {
-    height: 60px;
-    width: auto;
-    margin-left: 20px;
+    width: 120px;
+    height: auto;
 }
 
 nav ul {
     list-style-type: none;
-    margin-right: 20px;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
 }
 
 .banner {
-    position: relative;
     text-align: center;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 100px 0;
+    background-color: #6495ed;
     color: #fff;
 }
 
-.banner-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.content {
+    padding: 40px 0;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    text-decoration: none;
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 5px;
-    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cta-button:hover {
-    background-color: #45a049;
+form label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-.destaque {
-    text-align: center;
-    margin: 50px 0;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-.destaque h2 {
-    font-size: 2em;
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #6495ed;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4169e1;
 }
 
 footer {
+    text-align: center;
+    padding: 10px;
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-footer .social a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer .copyright {
-    margin-top: 20px;
 }
